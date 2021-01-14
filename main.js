@@ -3,6 +3,29 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
+let likeGlyph = document.querySelector(".like-glyph")
+let post = document.querySelector(".media-post")
+let body = document.querySelector("body")
+
+
+body.addEventListener('click', turnRed)
+function turnRed(e) {
+  mimicServerCall("url")
+  .then
+
+
+  if (e.target.className === "like-glyph" || e.target.className === "activated-heart"){
+    if (e.target.className === "activated-heart"){
+      e.target.innerHTML = EMPTY_HEART;
+      e.target.className = "like-glyph";
+    } else{
+        e.target.innerHTML = FULL_HEART;
+        e.target.className = "activated-heart";
+    }
+  }
+}
+
+
 
 
 
